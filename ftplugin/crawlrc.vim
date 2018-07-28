@@ -1,4 +1,4 @@
-" Vim syntax file
+" Vim ftplugin file for crawlrc
 " Author: Ruben Vereecken
 
 if exists("b:did_ftplugin")
