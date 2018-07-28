@@ -7,7 +7,20 @@ endif
 
 syntax case ignore
 
-syn keyword crawlOptionName message_colour autoinscribe
+" List options that are useful to alias
+syn keyword crawlOptionName weapon species background combo sound
+syn keyword crawlOptionName autopickup_exceptions drop_filter
+syn keyword crawlOptionName explore_stop explore_stop_pickup_ignore
+syn keyword crawlOptionName runrest_ignore_message runrest_stop_message runrest_ignore_monster
+syn keyword crawlOptionName auto_exclude spell_slot item_slot ability_slot
+syn keyword crawlOptionName confirm_action monster_list_colour use_animations
+syn keyword crawlOptionName force_more_message flash_screen_message
+syn keyword crawlOptionName menu_colour message_colour
+syn keyword crawlOptionName fire_order autoinscribe
+syn keyword crawlOptionName macros dump_order note_items note_monsters
+syn keyword crawlOptionName note_items note_monsters note_messages
+syn keyword crawlOptionName feature mon_glyph item_glyph
+
 
 syn keyword crawlKeyword true false
 syn keyword crawlOptionValue safe unident yes no prompt very full always never
