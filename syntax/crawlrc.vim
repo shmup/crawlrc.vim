@@ -10,7 +10,7 @@ syntax case ignore
 syn keyword crawlOptionName message_colour autoinscribe
 
 syn keyword crawlKeyword true false
-syn keyword crawlOptionValue safe unident yes no
+syn keyword crawlOptionValue safe unident yes no prompt very full always never
 
 syn match crawlComment  "^#.*$" contains=crawlTodo
 syn keyword crawlTodo TODO FIXME XXX NOTE
@@ -21,11 +21,11 @@ syn match crawlOperator "\v[\+\^]?\=" nextgroup=crawlStatementRhs
 " syn match crawlOperator "\v\^\="
 " syn match crawlOperator "\v\="
 
-syn match crawlNumber "\v[0-9]+"
+syn match crawlNumber "\v[0-9]+" contained
 
-syn match crawlStatement "\v^[a-z]" transparent
-syn region crawlStatementRhs start="." end="$" transparent containedin=crawlStatement contained contains=crawlOptionName,crawlKeyword,crawlOptionValue
-syn match crawlStatementLhs "\v^\i+\s*" containedin=crawlStatement contained nextgroup=crawlOperator
+syn match crawlStatement "\v^\s*\i+" transparent
+syn region crawlStatementRhs start="." end="$" transparent containedin=crawlStatement contained contains=crawlOptionName,crawlKeyword,crawlOptionValue,crawlNumber
+syn match crawlStatementLhs "\v\s*\i+\s*" containedin=crawlStatement contained nextgroup=crawlOperator
 
 syn match crawlColon "\v\:" transparent nextgroup=crawlRegex,crawlInscription
 " syn region crawlChannelAndValue start="+= " end="$" transparent contains=crawlChannel,crawlValue,crawlInscription,crawlInscriptionMatch
