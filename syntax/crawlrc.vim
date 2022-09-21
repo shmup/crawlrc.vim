@@ -53,7 +53,7 @@ syn keyword crawlLuaKeyword if then else end
 syn match crawlLuaString "\v(['"]).*\1"
 syn keyword crawlLuaIdentifier you
 
-syn include @perlRegex syntax/perl6.vim
+syn include @perlRegex syntax/perl.vim
 " syn region crawlRegex start="\v\+\= " end="\v.$" keepend
 " syn region crawlRegex start="\v\+\= " end="\v.$" keepend contains=@p6RegexBlock
 " syn match crawlRegex "\v\:.*" contains=@perlRegex
